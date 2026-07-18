@@ -3,7 +3,41 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Mahesh Kumar Muthu — DevOps Engineer</title>
+<title>Mahesh Kumar Muthu — DevOps Engineer | Platform Engineer | 10+ Years</title>
+<meta name="description" content="Senior DevOps Engineer with 10+ years delivering enterprise-grade infrastructure. 99.9% SLO uptime, 60% deployment lead time reduction. International engagements in Switzerland & Belgium."/>
+<!-- ✦ Open Graph / LinkedIn Preview ✦ -->
+<meta property="og:type" content="profile"/>
+<meta property="og:title" content="Mahesh Kumar Muthu — Senior DevOps Engineer"/>
+<meta property="og:description" content="10+ years | Kubernetes · CI/CD · DevSecOps | 99.9% SLO · 60% faster deploys | Telenet BV · Sunrise AG | Open to Senior DevOps & SRE roles"/>
+<meta property="og:image" content="https://maheshkumar.dev/og-preview.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="627"/>
+<meta property="og:url" content="https://maheshkumar.dev"/>
+<meta property="og:site_name" content="Mahesh Kumar Muthu — Portfolio"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Mahesh Kumar Muthu — Senior DevOps Engineer"/>
+<meta name="twitter:description" content="10+ years | Kubernetes · CI/CD · DevSecOps | 99.9% SLO | Open to Senior roles"/>
+<meta name="twitter:image" content="https://maheshkumar.dev/og-preview.png"/>
+<!-- ✦ JSON-LD Structured Data ✦ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mahesh Kumar Muthu",
+  "jobTitle": "Senior DevOps Engineer",
+  "description": "Technology Lead with 10+ years experience in DevOps, Platform Engineering, and SRE across India, Belgium, and Switzerland.",
+  "url": "https://maheshkumar.dev",
+  "email": "maheshkumarbeece51@gmail.com",
+  "telephone": "+91-9108920365",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Thiruvananthapuram",
+    "addressCountry": "IN"
+  },
+  "sameAs": ["https://linkedin.com/in/mahesh-kumar-a32540191"],
+  "knowsAbout": ["Kubernetes", "Docker", "CI/CD", "DevSecOps", "Terraform", "AWS", "Prometheus", "Grafana"]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Outfit:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 /* ═══════════════════════════════════════════════════════
@@ -107,13 +141,29 @@ nav {
   padding: 15px 28px; max-width: 1020px; margin: 0 auto;
 }
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px; font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.02em;
+  display: flex; align-items: center; gap: 10px;
   text-decoration: none;
 }
-.nav-logo span { color: var(--text2); font-weight: 600; font-size: 13px; margin-left: 6px; font-family: 'Outfit', sans-serif; }
+.nav-logo-mark {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  /* gradient ring */
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  padding: 2px;
+  box-shadow: 0 2px 10px rgba(79,158,255,0.25);
+}
+.nav-avatar-img {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 1.5px solid var(--surface);
+}
+.nav-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.nav-logo-name { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; color: var(--heading); letter-spacing: 0.01em; }
+.nav-logo-role { font-family: 'Fira Code', monospace; font-size: 10px; color: var(--accent2); letter-spacing: 0.07em; }
 .nav-right { display: flex; align-items: center; gap: 6px; }
 .nav-links { display: flex; gap: 4px; list-style: none; margin-right: 12px; }
 .nav-links a {
@@ -180,13 +230,36 @@ nav {
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
+/* Identity line — name, small and secondary */
+.hero-identity {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+  opacity: 0; animation: riseIn 0.7s 0.1s forwards;
+}
+.hero-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--text2); letter-spacing: 0.02em;
+}
+.hero-identity-divider {
+  width: 1px; height: 16px;
+  background: var(--border2); flex-shrink: 0;
+}
+.hero-identity-role {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px; color: var(--accent2);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+/* Headline — the problem-solver line */
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(46px, 6.5vw, 76px);
-  font-weight: 700; line-height: 1.06;
-  color: var(--heading); letter-spacing: -0.025em;
-  margin-bottom: 18px;
-  opacity: 0; animation: riseIn 0.7s 0.12s forwards;
+  font-size: clamp(32px, 4.8vw, 58px);
+  font-weight: 700; line-height: 1.18;
+  color: var(--heading); letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  max-width: 820px;
+  opacity: 0; animation: riseIn 0.7s 0.18s forwards;
 }
 .hero h1 em {
   font-style: normal;
@@ -194,10 +267,19 @@ nav {
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Sub-headline attribution line */
+.hero-attribution {
+  font-size: 13.5px; color: var(--text3);
+  font-family: 'Fira Code', monospace;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+  opacity: 0; animation: riseIn 0.7s 0.26s forwards;
+}
 .hero-roles {
   display: flex; flex-wrap: wrap; gap: 8px;
   margin-bottom: 36px;
-  opacity: 0; animation: riseIn 0.7s 0.2s forwards;
+  opacity: 0; animation: riseIn 0.7s 0.34s forwards;
 }
 .role-chip {
   font-size: 13px; font-weight: 500; color: var(--text2);
@@ -210,7 +292,7 @@ nav {
 .hero-contact {
   display: flex; flex-wrap: wrap; gap: 10px;
   margin-bottom: 60px;
-  opacity: 0; animation: riseIn 0.7s 0.28s forwards;
+  opacity: 0; animation: riseIn 0.7s 0.42s forwards;
 }
 .contact-link {
   display: flex; align-items: center; gap: 8px;
@@ -303,38 +385,114 @@ section { padding: 72px 0; }
 .kw-role   { color: var(--accent2); font-weight: 600; }
 
 /* ═══════════════════════════════════════════════════════
-   SKILLS
+   SKILLS — RECRUITER DASHBOARD DESIGN
 ═══════════════════════════════════════════════════════ */
-.skills-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+.skills-dashboard {
+  display: flex; flex-direction: column; gap: 14px;
 }
-.skill-card {
+
+/* Category row */
+.sk-category {
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 18px 22px;
-  display: flex; gap: 16px; align-items: flex-start;
-  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  border-radius: 16px; overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-.skill-card:hover { border-color: var(--border2); box-shadow: var(--card-shadow); transform: translateY(-2px); }
-.skill-card.full { grid-column: span 2; }
-.skill-label {
-  font-family: 'Fira Code', monospace;
-  font-size: 10.5px; font-weight: 500; color: var(--accent);
-  letter-spacing: 0.08em; text-transform: uppercase;
-  min-width: 112px; padding-top: 4px; flex-shrink: 0;
-  line-height: 1.4;
+.sk-category:hover { border-color: var(--border2); box-shadow: var(--card-shadow); }
+
+.sk-cat-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 22px 14px;
+  border-bottom: 1px solid var(--border);
 }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag {
-  font-size: 12px; font-weight: 500; color: var(--text);
+.sk-cat-icon {
+  width: 34px; height: 34px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.sk-cat-icon.blue   { background: rgba(79,158,255,0.12); }
+.sk-cat-icon.teal   { background: rgba(0,212,170,0.1); }
+.sk-cat-icon.purple { background: rgba(160,100,255,0.1); }
+.sk-cat-icon.gold   { background: rgba(240,164,67,0.1); }
+.sk-cat-icon.pink   { background: rgba(255,100,160,0.1); }
+.sk-cat-icon.green  { background: rgba(50,200,100,0.1); }
+[data-theme="light"] .sk-cat-icon.blue   { background: rgba(26,86,214,0.07); }
+[data-theme="light"] .sk-cat-icon.teal   { background: rgba(0,163,128,0.07); }
+[data-theme="light"] .sk-cat-icon.purple { background: rgba(120,60,220,0.07); }
+[data-theme="light"] .sk-cat-icon.gold   { background: rgba(180,100,0,0.07); }
+[data-theme="light"] .sk-cat-icon.pink   { background: rgba(200,40,120,0.07); }
+[data-theme="light"] .sk-cat-icon.green  { background: rgba(30,150,60,0.07); }
+
+.sk-cat-info { flex: 1; }
+.sk-cat-name {
+  font-size: 13px; font-weight: 600; color: var(--heading);
+  letter-spacing: 0.01em; margin-bottom: 1px;
+}
+.sk-cat-sub { font-size: 11px; color: var(--text3); font-family: 'Fira Code', monospace; letter-spacing: 0.04em; }
+
+.sk-cat-exp {
+  font-family: 'Fira Code', monospace; font-size: 10.5px;
+  color: var(--accent2); letter-spacing: 0.06em;
+  background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.18);
+  border-radius: 100px; padding: 3px 10px; white-space: nowrap;
+}
+[data-theme="light"] .sk-cat-exp { background: rgba(0,163,128,0.07); border-color: rgba(0,163,128,0.2); }
+
+.sk-cat-body { padding: 16px 22px; }
+
+/* Two-column tool grid within each category */
+.sk-tools-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px;
+}
+.sk-tool-row {
+  display: flex; align-items: center; gap: 10px;
+}
+.sk-tool-name {
+  font-size: 12.5px; font-weight: 500; color: var(--text2);
+  min-width: 96px; flex-shrink: 0;
+}
+.sk-track {
+  flex: 1; height: 5px; border-radius: 100px;
+  background: var(--border); overflow: hidden;
+}
+.sk-fill {
+  height: 100%; border-radius: 100px;
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sk-fill.anim { width: var(--w); }
+.sk-fill.blue   { background: linear-gradient(90deg, #4f9eff, #7bb8ff); }
+.sk-fill.teal   { background: linear-gradient(90deg, #00d4aa, #00eabb); }
+.sk-fill.purple { background: linear-gradient(90deg, #a064ff, #c490ff); }
+.sk-fill.gold   { background: linear-gradient(90deg, #f0a443, #ffc06e); }
+.sk-fill.pink   { background: linear-gradient(90deg, #ff64a0, #ff8fc0); }
+.sk-fill.green  { background: linear-gradient(90deg, #32c864, #50e080); }
+.sk-pct { font-family: 'Fira Code', monospace; font-size: 10px; color: var(--text3); min-width: 28px; text-align: right; flex-shrink: 0; }
+
+/* Tags row for soft tools / practices */
+.sk-tags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+.sk-tag {
+  font-size: 11.5px; font-weight: 500; color: var(--text2);
   background: var(--tag-bg); border: 1px solid var(--tag-border);
-  border-radius: 7px; padding: 3px 11px;
+  border-radius: 6px; padding: 3px 10px;
   transition: all 0.15s; cursor: default;
 }
-.tag:hover { background: var(--accent); border-color: var(--accent); color: #fff; transform: translateY(-1px); }
+.sk-tag:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 
-/* ═══════════════════════════════════════════════════════
-   EXPERIENCE
-═══════════════════════════════════════════════════════ */
+/* Mastery legend */
+.sk-legend {
+  display: flex; align-items: center; gap: 18px;
+  padding: 12px 22px;
+  background: var(--surface2); border-top: 1px solid var(--border);
+  font-size: 10.5px; color: var(--text3); font-family: 'Fira Code', monospace;
+}
+.sk-legend-item { display: flex; align-items: center; gap: 6px; }
+.sk-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .sk-tools-grid { grid-template-columns: 1fr; }
+}
+
+
 .timeline { position: relative; }
 .tl-spine {
   position: absolute; left: 18px; top: 8px; bottom: 8px; width: 1px;
@@ -488,14 +646,39 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   OPEN-TO-WORK FLOATING CTA  (Change 3)
+═══════════════════════════════════════════════════════ */
+.otw-badge {
+  position: fixed; bottom: 28px; right: 28px; z-index: 300;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
+}
+.li-share {
+  display: flex; align-items: center; gap: 8px;
+  background: #0A66C2; color: #fff;
+  border-radius: 100px; padding: 9px 18px;
+  font-size: 12px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.02em;
+  box-shadow: 0 4px 20px rgba(10,102,194,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.li-share:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(10,102,194,0.5); }
+.li-share svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .otw-badge { bottom: 16px; right: 16px; }
+}
+
+
 @media (max-width: 760px) {
   .stats-row, .ach-grid, .edu-grid { grid-template-columns: 1fr 1fr; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .skill-card.full { grid-column: span 1; }
   .exp-card { padding: 22px 20px; }
   nav .nav-links { display: none; }
   .hero h1 { font-size: 42px; }
   .summary-wrap { padding: 28px 24px; }
+  .sk-tools-grid { grid-template-columns: 1fr !important; }
+  .skills-dashboard > div[style*="grid"] { grid-template-columns: 1fr !important; }
+  .nav-logo-text { display: none; }
 }
 @media (max-width: 480px) {
   .stats-row, .ach-grid, .edu-grid { grid-template-columns: 1fr; }
@@ -508,7 +691,15 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
 <!-- ═══ NAVBAR ═══════════════════════════════════════════ -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">MK <span>/ DevOps Engineer</span></a>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCABgAGADASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABgcDBAUCAQj/xAA4EAABAwMDAwMDAgQEBwEAAAABAgMEAAURBhIhEzFBBxRRImFxFTIII4GRFjOhwSRCQ1JygrHh/8QAGwEAAgMBAQEAAAAAAAAAAAAABQYCAwQHAAH/xAAwEQABBAECBQIFAgcAAAAAAAABAAIDEQQFIRIxQVFhBhMigZHB8BTRMjNScaGx8f/aAAwDAQACEQMRAD8AfMaVDZlFtxK1FXAUteQf60Ka5l2tMhcRRcS6lsHqMnPHwRRfFZhJjFooG5QyN4/2pTanudsuOqFw5FxRbkglJcaRuUSO4oPlytyGBvVZ3RlppW9J3tsrlQGJCmkN5WPhzd4A+aF7w66md72NcXYzjKinoLwolWeeR2qd8MRW2k2bfJAKSp4cKKc5z/WsW2MtXLUzzLyXIcmQ6Uo3pJyPkmhMsHA6+SibJTV0VquZMuYhylOLQ80CMp4470SSIceRIQFsvJUFf5qTjH3pcafQ7pjVaIEhTshRUAJCAdhH48UyLo68JglB4pZOPpHmjOnmgQ07KiZu263NjLbbbbr25IGOByfzXj7Ta0gRxvx4Txislu5mRFDakg8Z3K44q/b56Nqm3Ftt7B/eiN0rGua7ZeOMByMpvpbAOSVdqzFTxCJajltxtXKijgg1cm3BtCekMub+CvPAqo9CegpYloaQtlRx9Bzt/Ne95rXAOPPkqn8/hVAX2QxdEquD+1s9uO4/PzQprV643Jl9mDGUWHVjZIRla0Z84PejK5uF4IaTGQpCucqxkH7Ur9bahbsqHI77cyHGUgpdf7tqP4HOaq1CdrIC8gnwN7UBZdwgo30zrWBN68G7zi+4V5Q8EgDBPArPuvp7bpmr3NQCU7IPTGImwBB58GlVLsMrSWkpE9191UxtvcgsrCk7vCsGqGk/4iwIsSHOjyJj4+h8oAQUqH5pQxmzObcRsBE3C9gnHc27z/h5JtWl2lFzckIZABQB5JoVTBujMyJOchqUtle9TnYgecjziimx6wVeGFqt3VRHcCSUHhSCe9bmpWH79aIkKJcG4LyMhRSOVcfHmoe/JISCACFFrfqh61qnOXll5RTLiKXkLT/0yOaN32UKlOrmqKoqk7kgUrNPxNQ6e1YqBc5oWlxB6ZKwP/bbRJJlyFPPsMOPqOwFZWcJyewA+K0400sdhvNV0L+JbN0cVD2BOVtrH0KzxtqaC665CUEM9c+ec4FU7a09NhoYuaiARtCUnO3H/wArRjohxWn40K4FtzICw5zkfajLtR4cYyFtuHRZ3Rji8KwrUmn4CG4Up5jrtp638w7d39+9R2/VcWbcpTDrAW2UpRlA+n6qxX7bFuUhE6Uyr2o/ldLYFlfPcK8VrRtMxI8pldqUqEyU/SN3+pzSLPnulkLy47Gx+y1NZsVOpvaC0hzeEqISVUA6mgSbxKVDhMxnGzlLxQjqY/KjwPxRZqOY3FgPSorvUkNOBCyXAjn5we9C0dxqzIm31d3LfXSVKjLKUpWR5x8/emw6nFlsDY3C+oJpZmQEGyuLvpG3KW41K2piqUlTbxXkAgcHNJbVfprFRqRxq1spXOf/AJm5CSQoZyTxT7kpgOgyGbsHGkjaqMtIUlJqN62MpQbjbZSWm9uzDKQTu+3wKW2ZboX20kLZxggEoU0zd3rVbmLfdmW40gEJWkJxnxmt52ddrXco4bbE5lLuQsJwpAPb813Ot0GfIjuy40WQ8yncErzkfParVvnS0dWMGWlpBHSG3aoD4yauhlD9zz7LzXWVxetStxJYXItganPp4ecQCdg7HiorNMk3ZuYpZCS2gLDpG3dnwB9qxfUuzsQ4T2r1TnxFhsnqoB3JbGe+PNIK4eo+rZ1uXNtbE6PYPcCGH8lPUWQVBJIxk4GceB/qZwcd2SbZsO6+uBJX1Jp99VtvC0SOo4kpy73VwfIqvq6+SA6h60NBMBagyHtn1KUfv8UnNOwPWBWkZF8stvnuQg2pa+qvplaU5zsBGT24rjSvqDetY6fdska39VuEPcKLndI3YAOO/Oeaz6rjZEMbnwPHCOe9fNRkgcwAvGxTfd15Gsmm/Zvx1smKjCFlJWlQP3H3rEtWubzLeiwXpsdDj60qQp1zACc8isTS0jTt7v36ZdY7DTa2ShyMVHClDvj4q7H0BYIetZSPcO+26QXAO5RKVHukjyKTIyxlsksO5jyoHldpkybjpu8PLstyhRbk2UJKnUKHfPjzxSd9SNPo0vqJFxegy3tPL3BPtV9RTS8cBzPZP3pgo0PDfjMpmSGmXXFJSuQwktFOORg+fvQN/EE3qmwaajvW+XHdtLrvTkpHdOBwSfIPxRPTZYveawm/HS19bxdFFAukeS+UNOtNPqXvW0FbFPJ8/SfNaK9RG23t+S/c2osUtDbG25Ufk0YXT0U0pc9Qzby3NnRpMqOWCWlpwgH/AJhxwarM+iFoi7VI1Bcg4WSyp/CVqVnsTkd6bnekczY1+fnhBRrmE6qkCoWfVtrnxVKYElbWzl/pkZH5rJYvM2FqRplMd6RbVrLnvEkuEH4PxRfD9P59jtH6fHvipqd+4uuM9Nah/wBpxxXX+HJ1tgpj2xwM9Rzc5uBKRmh7vT+fFIaiNdOq0w6phE/zm/VDnqvZmbz6GaqRGkOmSLYuUhCVkFWwhZGB34SeKzvSbUfptZPTuxWXVE2Iy8y2FqbcaLiA6ok7icFJXzjI+KJNW6fu7vp9elSrlDSluOp5LYCk7ggbsE8d8dqErsn0wt2jBeLhaYQeDJbUptX/ABOADgtNkgKWPHI/rjBIwY8uNH7WQ0tLjY+iY9HkZMHSwPDq2PhPu6eq3phI0z+nN60s2VABttD6SVceAnPf4r4xt+nhb/4obsbDNV+mssuSGxHd3J2ObUpBI4UCpWMH4+1PK0ab9E/UJv3kTS5gMRwzH2zWRBcbUGQnLaeSvISCokAg85O6sa+NaL0XdpzFsR7NMkoYS8whSusRvWUq4PA3owSc5qjKlqKRrAS5zSKr7IhqEZ/Tuc8gNG9/b5rcsGm4c51lxVtMO5xl9V9KkhIIHYgjuK2blDudgmy9Sic1KZCBsbxkx0+T96Vb/qPPs9ySu3ylSn22wX0LRlQR8fepvT3WE6+Xqe7dpzT6pIV/KfSdrSPCeOKS5MHKawulbQG3W0sNlY8fCbTE0z6i2/WKpUaQxIW5DdBCtm3A8HFLP+IewSb00wq3zJYt6Ww5Kjd17+wOM0zZAjxdQwpUT2jCX2g2+C3gLT4OR/vQ1q/S911X6ida0PiG02hKEznOWkpSOdqPJOe5rbpMbY8oPjHIdVY2ympHWkNJUJBwRkZqVbzLgCFTHAc5G1WKDTKhxlNxrkzJQsAjIcxtA8Z81ZalafnxxIttxWUMnC/qzkec11I+scINs3xdqXJ3ei9TZJwUK739kUF9KCEpuLv9cGo3pK1oUTNUUpGc4xVSDFtV5WtURtSUoICl5KBn7fNaQ0/FabKfcKUPgKIB/NFsbWY8qISQA79xX58lBnpDUzLwPADe/Esi8yGpVpfYkTgIrrK0OkkYCCkhR+3Ga+JZGrm7BrMRNXMu3SJFT0rdcI4BUGirKHmtwKcqSEnkH4NfZ98sUkWt9i2hlJcQpIIT24855P8AekBE9MnPUa63CzJLceZBO99h0dQNgnAWPJQrHBH4OKw63M1zGyObsOvUWui+jNCyNNMjXy259bDltff+/hC919cNPT4cFVltN2k6gaeQpqZNSxvZ2k8NJjtoCtw4O4Hv9qImpuopdjedvsj209avcONrGC2cAJTjxgAU4PTz0Gt2jY/URa4S5yuFSwypS0f+JVwn+lSSPRiw6reusmLcJtvf92voyGiFtchO9JQf3jeFqyCMFahmlzEdHkyFsTTsOd0fkft1TL6jwcqXFAEguweGrB8G/wDaSVhj/q2+ftKpLuUOLWrvjtR/pTRU1t2cxbkIQ8thKy4pWCg58fmqEn0z9QdFXqO1OtibpaXZCG/1C1JKg2CoDLjf7kd+TyPvRxeJkeweqtygR2JLjjAb/bkoI2g44rRqeZBDjmKRpsDmRdkn/q5/p+kahFl++6gziFgf0gOH7Int1l222O9fXW25CTktg/uSPFY+o7kh8qdgXBTDCThCUADjt3ry/v3PUjbUhiY3HLqQn6QQpHwMUv7jYdesvrbhQm5LCE7QHjgkeTSnjSNmZ2H0Kd3NvZvJOB7T8d1tW1lTriVfscJPNcQ7MI8laf0YR2yPrWgAbqZrCY+4lTDYKucgd6HvUOW1A0JILDqYrz7iGAsDKiCcqSn4JAPPjmh+Ni/qJ2wtP8RpSdCOdoMjXCFFvoYYeLbTq0tHe5xnISAPA5+O5NEjJWoFXuG207ikbzjJ+OaSd6vKrNbnZpaKltMmUyCfpWWlBwp3DscJVRXA1Ai7swbq9EDPVaS+GVq39MqwSM+eSf7V1yNrY2hjeQUaTIMUqXhQQSD3HFCF40O7a9RN6x0tc3LPeIoIU4lPUafbJBU062f8xtRAyMgjukgijKKpJGV8jd/pmpJzifa4SQQpQ47+R2r0gDhwu5KbLBsITlaj9Q9Wz1x3LPCsVnKEgFMlbslZOMnG1KUDuB+44+Dmi+3MPwoSGI8beEpAALgRUER8LlrU2oKSD9TZOFdu6T5HyK1Q43syknBHjg1TDAyFvCwUFZJK6Q25eInS2lnrxm2ABnO/dn7Vh6iiwH2F3SO0WJeQXls4G9PncMc8ee4/HatedVx7dLYgXFCwiQ6IyXgcbHDygLT4C/2hQyM4BxmqAviHb0pDLwU0UgjByCe//wCVTmQMyYjE/r/g91DhtYsmxO3fUsWd7xaEt8JDZxuHwqimAqG3IeiXOLJU3wA4D3x4onhx7TJtjMkR2myoYIA7GrChFMfpL2YBwEAVyqbFka50T3EEdu6rYS3ruv/Z" alt="Mahesh Kumar Muthu" class="nav-avatar-img"/>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Mahesh Kumar</span>
+        <span class="nav-logo-role">DevOps · Platform · SRE</span>
+      </div>
+    </a>
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="#summary">Summary</a></li>
@@ -528,8 +719,18 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
 <!-- ═══ HERO ══════════════════════════════════════════════ -->
 <div class="container">
   <section class="hero">
-    <div class="hero-eyebrow">Open to DevOps &amp; SRE Roles</div>
-    <h1>Mahesh Kumar<br/><em>Muthu</em></h1>
+    <div class="hero-eyebrow">Senior DevOps Engineer · Platform · SRE</div>
+
+    <!-- Name — small, secondary -->
+    <div class="hero-identity">
+      <span class="hero-name">Mahesh Kumar Muthu</span>
+      <span class="hero-identity-divider"></span>
+      <span class="hero-identity-role">10+ yrs · India · Belgium · Switzerland</span>
+    </div>
+
+    <!-- The Problem-Solver Headline -->
+    <h1>Most infrastructure problems<br/>aren't tool problems.<br/><em>I find the real ones</em> — and fix them<br/>before they wake anyone up.</h1>
+    <div class="hero-attribution">// Kubernetes · CI/CD · DevSecOps · SRE · Telenet BV · Sunrise AG</div>
     <div class="hero-roles">
       <span class="role-chip">DevOps Engineer</span>
       <span class="role-chip">Platform Engineer</span>
@@ -612,57 +813,135 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
       <h2 class="sec-title">Technical Skills</h2>
       <span class="sec-line"></span>
     </div>
-    <div class="skills-grid">
-      <div class="skill-card reveal reveal-d1">
-        <span class="skill-label">Container &amp; Orchestration</span>
-        <div class="skill-tags">
-          <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">OpenShift</span>
-          <span class="tag">Helm</span><span class="tag">Argo CD</span><span class="tag">GitOps</span>
+    <div class="skills-dashboard">
+
+      <!-- Category 1: Containers & Orchestration -->
+      <div class="sk-category reveal reveal-d1">
+        <div class="sk-cat-header">
+          <div class="sk-cat-icon blue">🐳</div>
+          <div class="sk-cat-info">
+            <div class="sk-cat-name">Container &amp; Orchestration</div>
+            <div class="sk-cat-sub">kubernetes · docker · openshift · helm · argo cd · gitops</div>
+          </div>
+          <span class="sk-cat-exp">7+ yrs</span>
+        </div>
+        <div class="sk-cat-body">
+          <div class="sk-tools-grid">
+            <div class="sk-tool-row"><span class="sk-tool-name">Kubernetes</span><div class="sk-track"><div class="sk-fill blue" style="--w:93%"></div></div><span class="sk-pct">93%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Docker</span><div class="sk-track"><div class="sk-fill blue" style="--w:96%"></div></div><span class="sk-pct">96%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Helm</span><div class="sk-track"><div class="sk-fill blue" style="--w:88%"></div></div><span class="sk-pct">88%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Argo CD</span><div class="sk-track"><div class="sk-fill blue" style="--w:87%"></div></div><span class="sk-pct">87%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">OpenShift</span><div class="sk-track"><div class="sk-fill blue" style="--w:82%"></div></div><span class="sk-pct">82%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">GitOps</span><div class="sk-track"><div class="sk-fill blue" style="--w:90%"></div></div><span class="sk-pct">90%</span></div>
+          </div>
         </div>
       </div>
-      <div class="skill-card reveal reveal-d2">
-        <span class="skill-label">CI/CD &amp; Automation</span>
-        <div class="skill-tags">
-          <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span>
-          <span class="tag">Ansible</span><span class="tag">Shell/Bash</span>
+
+      <!-- Category 2: CI/CD & Automation -->
+      <div class="sk-category reveal reveal-d2">
+        <div class="sk-cat-header">
+          <div class="sk-cat-icon teal">⚙️</div>
+          <div class="sk-cat-info">
+            <div class="sk-cat-name">CI/CD &amp; Automation</div>
+            <div class="sk-cat-sub">jenkins · github actions · gitlab ci · ansible · shell/bash</div>
+          </div>
+          <span class="sk-cat-exp">8+ yrs</span>
+        </div>
+        <div class="sk-cat-body">
+          <div class="sk-tools-grid">
+            <div class="sk-tool-row"><span class="sk-tool-name">Jenkins</span><div class="sk-track"><div class="sk-fill teal" style="--w:95%"></div></div><span class="sk-pct">95%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">GitHub Actions</span><div class="sk-track"><div class="sk-fill teal" style="--w:91%"></div></div><span class="sk-pct">91%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">GitLab CI</span><div class="sk-track"><div class="sk-fill teal" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Ansible</span><div class="sk-track"><div class="sk-fill teal" style="--w:83%"></div></div><span class="sk-pct">83%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Shell / Bash</span><div class="sk-track"><div class="sk-fill teal" style="--w:92%"></div></div><span class="sk-pct">92%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Pipeline Design</span><div class="sk-track"><div class="sk-fill teal" style="--w:94%"></div></div><span class="sk-pct">94%</span></div>
+          </div>
         </div>
       </div>
-      <div class="skill-card reveal reveal-d1">
-        <span class="skill-label">Observability</span>
-        <div class="skill-tags">
-          <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">ELK Stack</span>
-          <span class="tag">Dynatrace</span><span class="tag">Datadog</span><span class="tag">Structured Logging</span>
+
+      <!-- Row 2: two side-by-side categories -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+
+        <!-- Category 3: Observability -->
+        <div class="sk-category reveal reveal-d1">
+          <div class="sk-cat-header">
+            <div class="sk-cat-icon purple">📊</div>
+            <div class="sk-cat-info">
+              <div class="sk-cat-name">Observability</div>
+              <div class="sk-cat-sub">prometheus · grafana · elk · dynatrace · datadog</div>
+            </div>
+            <span class="sk-cat-exp">6+ yrs</span>
+          </div>
+          <div class="sk-cat-body">
+            <div class="sk-tools-grid" style="grid-template-columns:1fr;">
+              <div class="sk-tool-row"><span class="sk-tool-name">Prometheus</span><div class="sk-track"><div class="sk-fill purple" style="--w:92%"></div></div><span class="sk-pct">92%</span></div>
+              <div class="sk-tool-row"><span class="sk-tool-name">Grafana</span><div class="sk-track"><div class="sk-fill purple" style="--w:90%"></div></div><span class="sk-pct">90%</span></div>
+              <div class="sk-tool-row"><span class="sk-tool-name">ELK Stack</span><div class="sk-track"><div class="sk-fill purple" style="--w:86%"></div></div><span class="sk-pct">86%</span></div>
+              <div class="sk-tool-row"><span class="sk-tool-name">Datadog</span><div class="sk-track"><div class="sk-fill purple" style="--w:80%"></div></div><span class="sk-pct">80%</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Cloud & IaC -->
+        <div class="sk-category reveal reveal-d2">
+          <div class="sk-cat-header">
+            <div class="sk-cat-icon gold">☁️</div>
+            <div class="sk-cat-info">
+              <div class="sk-cat-name">Cloud &amp; IaC</div>
+              <div class="sk-cat-sub">aws · terraform · linux rhel · networking</div>
+            </div>
+            <span class="sk-cat-exp">5+ yrs</span>
+          </div>
+          <div class="sk-cat-body">
+            <div class="sk-tools-grid" style="grid-template-columns:1fr;">
+              <div class="sk-tool-row"><span class="sk-tool-name">Linux / RHEL</span><div class="sk-track"><div class="sk-fill gold" style="--w:94%"></div></div><span class="sk-pct">94%</span></div>
+              <div class="sk-tool-row"><span class="sk-tool-name">Terraform</span><div class="sk-track"><div class="sk-fill gold" style="--w:81%"></div></div><span class="sk-pct">81%</span></div>
+              <div class="sk-tool-row"><span class="sk-tool-name">AWS</span><div class="sk-track"><div class="sk-fill gold" style="--w:79%"></div></div><span class="sk-pct">79%</span></div>
+              <div class="sk-tool-row"><span class="sk-tool-name">Networking/DNS</span><div class="sk-track"><div class="sk-fill gold" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Category 5: Security + API + SRE Practices (full row) -->
+      <div class="sk-category reveal reveal-d1">
+        <div class="sk-cat-header">
+          <div class="sk-cat-icon green">🛡️</div>
+          <div class="sk-cat-info">
+            <div class="sk-cat-name">DevSecOps, API &amp; SRE Practices</div>
+            <div class="sk-cat-sub">devsecops · sast/dast · 3scale · kafka · slo/sla · incident response · gitops</div>
+          </div>
+          <span class="sk-cat-exp">5+ yrs</span>
+        </div>
+        <div class="sk-cat-body">
+          <div class="sk-tools-grid">
+            <div class="sk-tool-row"><span class="sk-tool-name">DevSecOps</span><div class="sk-track"><div class="sk-fill green" style="--w:88%"></div></div><span class="sk-pct">88%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">SAST / DAST</span><div class="sk-track"><div class="sk-fill green" style="--w:85%"></div></div><span class="sk-pct">85%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">SLO/SLA Mgmt</span><div class="sk-track"><div class="sk-fill green" style="--w:92%"></div></div><span class="sk-pct">92%</span></div>
+            <div class="sk-tool-row"><span class="sk-tool-name">Incident Response</span><div class="sk-track"><div class="sk-fill green" style="--w:90%"></div></div><span class="sk-pct">90%</span></div>
+          </div>
+          <div class="sk-tags-row">
+            <span class="sk-tag">3scale API Mgmt</span><span class="sk-tag">Apache Kafka</span>
+            <span class="sk-tag">OAuth2 / OIDC</span><span class="sk-tag">SSO</span>
+            <span class="sk-tag">Error Budgets</span><span class="sk-tag">MTTR Reduction</span>
+            <span class="sk-tag">Agile / Scrum</span><span class="sk-tag">Secure SDLC</span>
+            <span class="sk-tag">Threat Modelling</span>
+          </div>
         </div>
       </div>
-      <div class="skill-card reveal reveal-d2">
-        <span class="skill-label">Cloud &amp; Infrastructure</span>
-        <div class="skill-tags">
-          <span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Linux (RHEL)</span>
-          <span class="tag">Ubuntu</span><span class="tag">Networking</span><span class="tag">DNS</span>
+
+      <!-- Legend -->
+      <div class="sk-category" style="border-color:var(--border);">
+        <div class="sk-legend">
+          <span>Proficiency scale:</span>
+          <span class="sk-legend-item"><span class="sk-legend-dot" style="background:#4f9eff"></span>70–79% Proficient</span>
+          <span class="sk-legend-item"><span class="sk-legend-dot" style="background:#00d4aa"></span>80–89% Advanced</span>
+          <span class="sk-legend-item"><span class="sk-legend-dot" style="background:#f0a443"></span>90–96% Expert</span>
+          <span style="margin-left:auto;font-size:10px;">Based on production experience across enterprise projects</span>
         </div>
       </div>
-      <div class="skill-card reveal reveal-d1">
-        <span class="skill-label">API &amp; Messaging</span>
-        <div class="skill-tags">
-          <span class="tag">3scale API Mgmt</span><span class="tag">Apache Kafka</span>
-          <span class="tag">SSO</span><span class="tag">OAuth2</span><span class="tag">OIDC</span>
-        </div>
-      </div>
-      <div class="skill-card reveal reveal-d2">
-        <span class="skill-label">Security</span>
-        <div class="skill-tags">
-          <span class="tag">DevSecOps</span><span class="tag">SAST/DAST</span>
-          <span class="tag">Threat Modelling</span><span class="tag">Vuln. Management</span>
-        </div>
-      </div>
-      <div class="skill-card full reveal reveal-d1">
-        <span class="skill-label">SRE &amp; Practices</span>
-        <div class="skill-tags">
-          <span class="tag">SLO/SLA Management</span><span class="tag">Error Budgets</span>
-          <span class="tag">Incident Response</span><span class="tag">MTTR Reduction</span>
-          <span class="tag">Agile/Scrum</span><span class="tag">GitOps</span><span class="tag">Secure SDLC</span>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -678,6 +957,24 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
     <div class="timeline">
       <div class="tl-spine"></div>
 
+
+      <div class="exp-item reveal reveal-d3">
+        <div class="exp-left"><div class="tl-dot"></div></div>
+        <div class="exp-card">
+          <div class="exp-top">
+            <h3 class="exp-title">Technology Lead — Platform Operations</h3>
+            <span class="exp-badge">May 2016 – Present</span>
+          </div>
+          <p class="exp-company"><span class="flag">🇮🇳</span> Infosys Ltd, India</p>
+          <ul class="bullets">
+            <li><span><b>Application Delivery:</b> Built and maintained enterprise web applications (Angular, Java, SQL) serving <span class="m">100,000+ end users</span> across telecom environments.</span></li>
+            <li><span><b>CI/CD Automation:</b> Implemented Jenkins pipelines and shell scripting; reduced manual deployment effort by <span class="m">50%</span>.</span></li>
+            <li><span><b>Mentorship &amp; Quality:</b> Led knowledge-sharing programs; reduced post-release defect rates by <span class="m">30%</span> through code quality initiatives.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      
       <div class="exp-item reveal reveal-d1">
         <div class="exp-left"><div class="tl-dot"></div></div>
         <div class="exp-card">
@@ -708,22 +1005,6 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
             <li><span><b>Kubernetes Operations:</b> Owned capacity planning, autoscaling, resource quotas, and zero-downtime rolling deployments across staging and production clusters.</span></li>
             <li><span><b>Engineering Excellence:</b> Defined architecture review standards for a 12-person team; improved sprint velocity by <span class="m">25%</span> and reduced technical debt measurably.</span></li>
             <li><span><b>Team Building:</b> Hired and mentored 6 engineers; scaled the team from 6 → 12 in under 6 months using structured interview and onboarding frameworks.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal reveal-d3">
-        <div class="exp-left"><div class="tl-dot"></div></div>
-        <div class="exp-card">
-          <div class="exp-top">
-            <h3 class="exp-title">Technology Lead — Platform Operations</h3>
-            <span class="exp-badge">May 2016 – Aug 2021</span>
-          </div>
-          <p class="exp-company"><span class="flag">🇮🇳</span> Infosys Ltd, India</p>
-          <ul class="bullets">
-            <li><span><b>Application Delivery:</b> Built and maintained enterprise web applications (Angular, Java, SQL) serving <span class="m">100,000+ end users</span> across telecom environments.</span></li>
-            <li><span><b>CI/CD Automation:</b> Implemented Jenkins pipelines and shell scripting; reduced manual deployment effort by <span class="m">50%</span>.</span></li>
-            <li><span><b>Mentorship &amp; Quality:</b> Led knowledge-sharing programs; reduced post-release defect rates by <span class="m">30%</span> through code quality initiatives.</span></li>
           </ul>
         </div>
       </div>
@@ -816,9 +1097,9 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
             <span class="ci">✅</span>
             Infosys Certified — Prompt Engineering
           </div>
-          <div class="cert-item progress">
-            <span class="ci">⏳</span>
-            AWS Solutions Architect Associate &nbsp;<em>(In Progress)</em>
+          <div class="cert-item">
+            <span class="ci">✅</span>
+            Anthropic Certified in MCP
           </div>
           <div class="cert-item progress">
             <span class="ci">⏳</span>
@@ -843,6 +1124,14 @@ footer .f-copy { font-size: 12px; opacity: 0.6; }
   <div class="f-copy">DevOps Engineer · Platform Engineer · Technology Lead</div>
 </footer>
 
+<!-- ✦ FLOATING CTA: LinkedIn only ✦ -->
+<div class="otw-badge">
+  <a href="https://linkedin.com/in/mahesh-kumar-a32540191" target="_blank" class="li-share">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    View on LinkedIn
+  </a>
+</div>
+
 <script>
 // ── Theme toggle ──────────────────────────────────────────
 function setTheme(t) {
@@ -854,6 +1143,17 @@ function setTheme(t) {
 // Restore saved theme
 const saved = localStorage.getItem('mk-theme');
 if (saved) setTheme(saved);
+
+// ── Skill bar animation ──────────────────────────────────
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.sk-fill').forEach(bar => bar.classList.add('anim'));
+      barObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.25 });
+document.querySelectorAll('.sk-category').forEach(el => barObs.observe(el));
 
 // ── Scroll reveal ─────────────────────────────────────────
 const obs = new IntersectionObserver((entries) => {
